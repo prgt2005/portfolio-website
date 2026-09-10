@@ -1,0 +1,142 @@
+/* ── Contact Section ── */
+.contact-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 0;
+}
+
+/* ── Section Header ── */
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-header .section-subtitle {
+  margin: 0 auto;
+}
+
+/* ── Terminal Box ── */
+.terminal-box {
+  background: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Terminal Header ── */
+.terminal-header {
+  background: #141414;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #262626;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terminal-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-dot.close {
+  background-color: #ff5f57;
+}
+
+.terminal-dot.minimize {
+  background-color: #febc2e;
+}
+
+.terminal-dot.expand {
+  background-color: #28c840;
+}
+
+.terminal-title {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #666666;
+  letter-spacing: 0.5px;
+}
+
+/* ── Terminal Body ── */
+.terminal-body {
+  padding: 2rem;
+}
+
+.terminal-command {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #CCFF00;
+  margin-bottom: 0.5rem;
+}
+
+.terminal-output {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: #A0A0A0;
+}
+
+/* ── Terminal Actions ── */
+.terminal-actions {
+  border-top: 1px solid #262626;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.terminal-actions .contact-btn {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.65rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ── Footer ── */
+.contact-footer {
+  text-align: center;
+  padding: 2.5rem;
+  margin-top: 4rem;
+  border-top: 1px solid #1A1A1A;
+  color: #666666;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .contact-section {
+    padding: 4rem 1rem 0;
+  }
+
+  .terminal-body {
+    padding: 1.25rem;
+  }
+
+  .terminal-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .terminal-actions .contact-btn {
+    width: 100%;
+  }
+}

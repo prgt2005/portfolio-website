@@ -1,0 +1,173 @@
+/* ═══════════════════════════════════════════════
+   GLOBAL STYLES — Cyber-Tech Retro-Futuristic
+   Colors: #0A0A0A (bg), #CCFF00 (neon accent)
+═══════════════════════════════════════════════ */
+
+:root {
+  /* Change your font families here in one place! */
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0A0A0A;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+::selection {
+  background: #CCFF00;
+  color: #0A0A0A;
+}
+
+/* ── App Root ── */
+.app-root {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #262626; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #CCFF00; }
+
+/* ── Utility: Neon Glow Text ── */
+.neon-glow {
+  color: #CCFF00;
+  text-shadow: 0 0 10px rgba(204, 255, 0, 0.6), 0 0 30px rgba(204, 255, 0, 0.25);
+}
+
+/* ── Utility: Fonts ── */
+.font-display { font-family: var(--font-display); }
+.font-sans    { font-family: var(--font-body); }
+
+/* ── Utility: Section Wrapper ── */
+.section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 7rem 1.5rem;
+}
+
+/* ── Section Headers ── */
+.section-header {
+  margin-bottom: 3.5rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #CCFF00;
+  text-shadow: 0 0 12px rgba(204, 255, 0, 0.4);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  color: #A0A0A0;
+  font-weight: 300;
+  max-width: 500px;
+}
+
+/* ── Buttons ── */
+.btn-neon {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  background: #CCFF00;
+  color: #0A0A0A;
+  font-weight: 700;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  border: 1.5px solid #CCFF00;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  box-shadow: 0 0 18px rgba(204, 255, 0, 0.35);
+  display: inline-block;
+  letter-spacing: 0.02em;
+}
+
+.btn-neon:hover {
+  background: #E5FF66;
+  box-shadow: 0 0 30px rgba(204, 255, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  background: #1A1A1A;
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  border: 1.5px solid #262626;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: inline-block;
+  letter-spacing: 0.02em;
+}
+
+.btn-ghost:hover {
+  border-color: #CCFF00;
+  color: #CCFF00;
+  transform: translateY(-2px);
+}
+
+/* ── Scroll Reveal Animation ── */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Pill Tag (used in Expertise) ── */
+.pill-tag {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid #333;
+  color: #D0D0D0;
+  background: #0A0A0A;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+
+.pill-tag:hover {
+  border-color: #CCFF00;
+  color: #CCFF00;
+}
+
+/* ── Blinking Cursor ── */
+.cursor-blink::after {
+  content: '_';
+  animation: blink 1s infinite;
+  color: #CCFF00;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

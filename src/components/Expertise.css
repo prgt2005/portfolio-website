@@ -1,0 +1,79 @@
+/* ══════════════════════════════════
+   EXPERTISE SECTION
+══════════════════════════════════ */
+
+.expertise-section {
+  position: relative;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ── Card ── */
+.expertise-card {
+  background: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 16px;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.expertise-card:hover {
+  border-color: #CCFF00;
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 35px rgba(204, 255, 0, 0.12),
+    0 0 15px rgba(204, 255, 0, 0.08);
+}
+
+.expertise-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.expertise-card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+.expertise-card-desc {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #A0A0A0;
+  line-height: 1.65;
+}
+
+.expertise-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-card {
+    padding: 1.5rem 1.25rem;
+  }
+}
