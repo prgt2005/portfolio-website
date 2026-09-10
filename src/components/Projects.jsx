@@ -67,9 +67,20 @@ const PROJECTS = [
     youtubeUrl: 'https://youtu.be/WYsf55CHQ8w?si=TNRe6yGIcTvTFiHc',
     tools: ['Premiere Pro', 'After Effects', 'YouTube'],
   },
+  {
+    id: 7,
+    title: 'Zentryx — Productivity Dashboard',
+    category: 'Web Application',
+    description:
+      'An all-in-one productivity dashboard featuring AI coaching, task management, analytics, and a modern glassmorphism UI. Built with Next.js and deployed on Netlify.',
+    image: '/zentryx_preview.jpg',
+    mediaType: 'webapp',
+    liveUrl: 'https://zentryxai.netlify.app/',
+    tools: ['Next.js', 'React', 'Tailwind CSS', 'AI'],
+  },
 ]
 
-const CATEGORIES = ['All', 'Visual Design', 'Motion Graphics', 'Content Creation']
+const CATEGORIES = ['All', 'Visual Design', 'Motion Graphics', 'Content Creation', 'Web Application']
 
 export default function Projects({ onSelectProject }) {
   const [activeFilter, setActiveFilter] = useState('All')
@@ -187,6 +198,14 @@ export default function Projects({ onSelectProject }) {
                       <div className="project-play-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" width="28" height="28" fill="#CCFF00">
                           <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    )}
+                    {project.mediaType === 'webapp' && (
+                      <div className="project-play-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="#CCFF00">
+                          <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+                          <path d="M5 5v14h14v-7h-2v5H7V7h5V5H5z" />
                         </svg>
                       </div>
                     )}

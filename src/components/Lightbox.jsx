@@ -60,6 +60,14 @@ const Lightbox = ({ project, onClose }) => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
+          ) : project.mediaType === 'webapp' ? (
+            <iframe
+              src={project.liveUrl}
+              title={project.title || 'Web Application'}
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope"
+              allowFullScreen
+              style={{ border: 'none', width: '100%', height: '100%', borderRadius: '0.75rem' }}
+            />
           ) : (
             <img
               src={project.src || project.image || project.imgSrc}
@@ -89,6 +97,17 @@ const Lightbox = ({ project, onClose }) => {
               className="lightbox-youtube-link"
             >
               open_on_youtube →
+            </a>
+          )}
+
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="lightbox-youtube-link"
+            >
+              visit_live_site →
             </a>
           )}
 
