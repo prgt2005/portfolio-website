@@ -69,7 +69,7 @@ export default function Hero() {
               View My Work
             </a>
             <a
-              href="/CV_Pragati_Anand0809.pdf"
+              href="/CV_Pragati_Anand0910.pdf"
               download
               className="btn-ghost"
             >
